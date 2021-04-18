@@ -1,0 +1,266 @@
+
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--body-background-color);
+    color: var(--primary-text-color);
+		font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	position: relative;
+	margin: 1rem;
+	border-bottom: 1px solid var(--primary-text-color);
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 1.5rem;
+}
+
+logo > a {
+	text-decoration: none;
+	color: var(--primary-text-color);
+	font-size: 2rem;
+}
+
+.nav-list {
+	list-style: none;
+	display: flex;
+}
+
+.nav-item {
+	margin-right: 1.5rem;
+}
+
+.nav-link {
+	text-decoration: none;
+	color: var(--accent-color);
+	font-size: 1.2rem;
+}
+
+#app {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 100%;
+	margin: .5rem 1rem;
+}
+
+.quiz-info {
+	display: none;
+}
+
+.quiz-info[data-show="true"] {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.quiz-info > .number {
+	font-size: 1.5rem;
+	width: 100%;
+	text-align: center;
+}
+
+.quiz-info > .meter {
+	position: relative;
+	margin: .5rem;
+	background-color: rgba(255,255,255,.6);
+	width: 18rem;
+	height: 0;
+	padding-top: 10%;
+	max-width: 100%;
+	border-radius: 5px;
+}
+
+.meter > .fill {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	background-color: var(--warning-button-color);
+	border-radius: 5px 0 0 5px;
+	width: 30%;
+	/* height: 1.8rem; */
+}
+
+fieldset {
+	max-width: 100%;
+}
+
+fieldset > legend,
+.question__content {
+	font-size: 1.3rem;
+	font-weight: 500;
+	font-style: italic;
+}
+
+footer {
+	position: relative;
+	bottom: 0;
+	padding: .5rem;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+	margin-right: .5rem;
+}
+
+label {
+	display: inline-block;
+}
+
+form.options > section {
+	margin-bottom: .75rem;
+}
+
+.quiz-option:checked + label {
+	color:var(--accent-color);
+}
+
+.question {
+	padding: 1rem;
+}
+
+.question fieldset {
+	display: flex;
+	flex-direction: column;
+}
+
+.answer-opt,
+.quiz-options > .option {
+	margin-top: .75rem;
+}
+
+.answer-opt {
+	display: flex;
+	align-items: center;
+	max-width: 100%;
+	padding: .25rem .5rem;
+}
+
+.question .buttons {
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 1.5rem;
+}
+
+.btn--stop,
+.btn--next,
+#btn--send {
+	padding: .5rem 1rem;
+}
+
+.btn--next {
+	background-color: var(--accent-color);
+	color: #000;
+}
+
+.btn--stop {
+	background-color: var(--warning-button-color);
+	color: #fff;
+}
+
+.quiz__results {
+	display: flex;
+	flex-direction: column;
+}
+
+.card {
+	margin-bottom: 1rem;
+	border: 1px solid #000;
+	padding: 1rem;
+}
+
+.card--correct .question__answers--given {
+	color:var(--accent-color);
+}
+
+.card--correct h4::after {
+	content: 'CORRECT! ';
+	margin-left: 1rem;
+	color:var(--accent-color);
+}
+
+.card--correct .correct-answers {
+	display: none;
+}
+
+.card--correct hr:nth-child(2) {
+	display: none;
+}
+
+.card--false .question__answers--given {
+	color:var(--warning-text-color)
+}
+
+.card--false h4::after {
+	content: 'WRONG! ';
+	margin-left: 1rem;
+	color:var(--warning-text-color)
+}
+
+.quiz-score {
+	font-size: 1.7rem;
+	text-align: center;
+}
+
+.timer {
+	margin-top: .75rem;
+	font-size: 2rem;
+	margin-bottom: .75rem;
+}
+
+.answers-list {
+	list-style: circle;
+	padding-left: 1.25rem;
+}
+
+.highscores-container ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.score-item {
+	margin-bottom: 1rem;
+	padding: 1rem;
+	border: 1px solid #000;
+}
+
+.highscores-container .score-item:first-child::before {
+	content: 'Top score:';
+	color: var(--accent-color);
+}
+
+.result-options {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.result-options p {
+	font-size: .8rem;
+}
+
+.result-options p:first-child::after {
+	content: '|';
+	padding: 0 .5rem;
+}
+
+.option-value {
+	font-size: 1rem;
+	text-transform: uppercase;
+}

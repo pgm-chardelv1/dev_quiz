@@ -1,0 +1,7 @@
+:root {
+    --body-background-color: #333;
+    --primary-text-color: #FFF;
+    --accent-color: rgb(0, 255, 34);
+    --warning-button-color: rgb(255, 0, 85);
+    --warning-text-color: rgb(255, 94, 94);
+}
